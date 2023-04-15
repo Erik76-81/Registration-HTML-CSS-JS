@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media.css" />
+    <link
+      rel="website icon"
+      type="png"
+      href="./img/1280px-Auto_Racing_Green.svg.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital@1&family=Corben&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <button class="btnlogin-popop" id="btnlogin">Login</button>
+        <div id="burger">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+      </nav>
+      
+      
+    </header>
+    <ul class="burger-ul">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    <div class="wrapper">
+      <span class="close-icon"
+        ><ion-icon id="close" name="close"></ion-icon
+      ></span>
+      <div class="form-box">
+        <h2>Login</h2>
+        <form action="">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required />
+            <label for="">Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required />
+            <label for="">Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label for=""
+              ><input type="checkbox" />I agree to the terms & conditions</label
+            >
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <div class="login-register">
+            <p id="href">Don't have an account? Register</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box-register">
+        <h2>Registration</h2>
+        <form action="">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" required />
+            <label for="">Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required />
+            <label for="">Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required />
+            <label for="">Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label for=""><input type="checkbox" />Remember me</label>
+            <p id="forgot">Forgot Password?</p>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p id="hrefout">Already have an account? Log in</p>
+          </div>
+        </form>
+      </div>
+      <div class="form-forgot">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+
+          <input type="email" required />
+          <label for="">Email</label>
+
+          <button id="Send" class="btn">Send</button>
+        </div>
+        <h3 id="back">back</h3>
+      </div>
+    </div>
+    <script src="./js.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

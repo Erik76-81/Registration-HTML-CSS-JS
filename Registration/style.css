@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Corben', cursive;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: url(./img/i.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+#burger{
+    display: none;
+}
+.burger-ul{
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    list-style: none;
+    backdrop-filter: blur(10px);
+    height: 200px;
+    width: 150px;
+    border: 1px solid rgb(0, 255, 0);
+    border-radius: 6px;
+}
+.burger-ul>li{
+    margin-left: 15px;
+}
+.burger-ul>li>a{
+    text-decoration: none;
+}
+.burgerblock{
+    display: block;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.logo {
+    font-size: 2cm;
+    color: rgb(255, 255, 255);
+    user-select: none;
+    font-family: 'Corben', cursive;
+
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.navigation>a {
+    position: relative;
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    font-family: 'Corben', cursive;
+}
+
+.navigation>a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navigation>a:hover::after {
+
+    transform: scaleX(1);
+}
+
+.navigation>.btnlogin-popop {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+   
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation>.btnlogin-popop:hover {
+    background-color: white;
+    color: black;
+}
+
+.wrapper {
+    margin: 10% auto;
+    position: relative;
+    width: 400px;
+    background: transparent;
+    height: 440px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba (0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    overflow: hidden;
+    display: none;
+
+
+}
+
+.wrapperblock {
+    display: flex;
+
+}
+
+.wrapperheigth {
+    height: 470px;
+    backdrop-filter: blur(10px);
+}
+
+.wrapperheigthemail {
+    height: 200px;
+    backdrop-filter: blur(10px);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.form-box {
+    width: 100%;
+    padding: 40px;
+
+}
+
+.form-box {
+    transition: 1s ease;
+    transform: translateX(0);
+}
+
+.form-boxblock {
+    transform: translateX(1);
+}
+
+.active .form.box {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    color: #fff;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#close {
+    margin-bottom: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.form-box>h2 {
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+    color: white;
+}
+
+.input-box>label {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+    color: white;
+}
+
+.input-box>input:focus~label,
+.input-box>input:valid~label {
+    top: -5px;
+}
+
+.input-box>input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+
+}
+
+.input-box>.icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot>p {
+    margin-left: 15px;
+    color: #000;
+    cursor: pointer;
+}
+
+.remember-forgot>label>input {
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.remember-forgot>a {
+    color: black;
+    text-decoration: none;
+}
+
+.remember-forgot>p:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+}
+
+.login-register {
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register>p {
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Corben', cursive;
+}
+
+.login-register>p:hover {
+    text-decoration: underline;
+}
+
+.form-box-register {
+    position: absolute;
+    transition: 1s;
+    transform: translateX(400px);
+}
+
+.leftregbox {
+    position: absolute;
+    transform: translateX(0px);
+}
+
+.formboxleft {
+    transform: translateX(-400px);
+}
+
+.form-box-register>h2 {
+    color: white;
+}
+
+.form-box>h2 {
+    color: white;
+}
+
+.form-forgot {
+    position: absolute;
+    transform: translateX(400px);
+    transition: 1s;
+}
+
+.form-forgot-left {
+
+    transform: translateX(-15px);
+}
+
+.leftregistrbox {
+    transform: translateX(-400px);
+}
+
+#back {
+    text-align: end;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+#back:hover {
+    text-decoration: underline;
+}
+#Send{
+    margin-top: 10px;
+}
